@@ -21,6 +21,7 @@ main {
     grid-gap: 64px;
     justify-content: center;
     align-items: start;
+    transition: all .25s ease-in;
 }
 
 .verdict-container {

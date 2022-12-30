@@ -31,7 +31,7 @@ function getDecision(decisionMaker, computerChoice, personChoice) {
   } else if (decisionMaker === null) {
     verdict = {
       color: 'orange',
-      answer: `You have drawn: ${personChoice}`,
+      answer: `It's a draw on: ${personChoice}`,
     };
   } else {
     verdict = {
