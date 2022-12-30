@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <main>
+        <div class="game">
+            <div class="verdict-container">
+                <p style="margin: auto">Choose rock, paper or scissors to start</p>
+            </div>
+            <div class="choice-container">
+                <div class="person">
+                    <span id="person">
+                        <div class="possible-answers__person">
+                            <img data-possible="false" src="./assets/rock-person.png" alt="" srcset="">
+                            <img data-possible="false" src="./assets/paper-person.png" alt="" srcset="">
+                            <img data-possible="false" src="./assets/scissors-person.png" alt="" srcset="">
+                        </div>
+                    </span>
+                    <img src="./assets/person.png" alt="computer" srcset="" width="32px">
+                </div>
+                <div class="computer">
+                    <span id="computer">
+                        <div class="possible-answers__computer">
+                            <img data-possible="false" src="./assets/rock-person.png" alt="" srcset="">
+                            <img data-possible="false" src="./assets/paper-person.png" alt="" srcset="">
+                            <img data-possible="false" src="./assets/scissors-person.png" alt="" srcset="">
+                        </div>
+                    </span>
+                    <img src="./assets/computer.png" alt="computer" srcset="" width="32px">
+                </div>
+            </div>
+            <div class="choices">
+                <button class="choice rock-choice" data-value="0">🪨</button>
+                <button class="choice paper-choice" data-value="1">🗞️</button>
+                <button class="choice scissors-choice" data-value="2">✂️</button>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
