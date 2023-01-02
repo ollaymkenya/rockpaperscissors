@@ -22,25 +22,20 @@ function verdictHandler(personChoice, computerChoice) {
       ? null
       : false;
 
-  var verdict;
-  if (won) {
-    verdict = {
-      color: 'green',
-      value: `You have won: ${choices[personChoice]} beats ${choices[computerChoice]}`,
-    };
-  } else if (won === null) {
-    verdict = {
-      color: 'orange',
-      value: `It's a tie on: ${choices[personChoice]}`,
-    };
-  } else {
-    verdict = {
-      color: 'brown',
-      value: `You have lost: ${choices[computerChoice]} beats ${choices[personChoice]}`,
-    };
-  }
-
-  return verdict;
+  return won
+    ? {
+        color: 'green',
+        value: `You have won: ${choices[personChoice]} beats ${choices[computerChoice]}`,
+      }
+    : won === null
+    ? {
+        color: 'orange',
+        value: `It's a tie on: ${choices[personChoice]}`,
+      }
+    : {
+        color: 'brown',
+        value: `You have lost: ${choices[computerChoice]} beats ${choices[personChoice]}`,
+      };
 }
 
 function imageHandler(index, choices) {
