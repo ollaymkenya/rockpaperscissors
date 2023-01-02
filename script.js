@@ -70,7 +70,6 @@ function changeImages(index, arrOfPlayers) {
 
 async function animateChoosing() {
   var index = 0;
-  let currentImage = choices[index].imageUrl;
   return await new Promise((resolve) => {
     let interval = setInterval(() => {
       if (index < 3) {
