@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    padding: 16px;
+    font-family: 'Special Elite', sans-serif;
+}
+
+.game {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 64px;
+}
+
+.verdict {
+    background-color: #efefef;
+    padding: 16px;
+}
+
+.choice {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+#person,
+#computer {
+    position: relative;
+    min-width: min(40vw, 150px);
+    height: 200px;
+}
+
+#computer {
+    scale: -1 1;
+}
+
+#person img,
+#computer img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    transition: opacity .5s ease-in;
+}
+
+[data-visible="false"] {
+    opacity: 0;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.option {
+    border: none;
+    padding: 16px;
+    font-size: 30px;
+    border-radius: 21px;
+}
