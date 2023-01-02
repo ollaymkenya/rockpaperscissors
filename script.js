@@ -7,10 +7,7 @@ const choices = [
 
 var optionsContainer = document.querySelector('.options');
 var options = document.querySelectorAll('.option');
-var computerChoiceOutput = document.querySelector('#computer');
-var personChoiceOutput = document.querySelector('#person');
-var verdict = document.querySelector('.verdict');
-var choiceContainer = document.querySelector('.choice');
+var verdictContainer = document.querySelector('.verdict');
 var main = document.querySelector('main');
 var possibleAnswersPerson = document.querySelectorAll(
   '.possible-answers__person img'
@@ -110,7 +107,7 @@ options.forEach((inputChoice) => {
     changeImages(computerChoice, [possibleAnswersComputer]);
 
     // showing the answer
-    verdict.innerHTML = `<p style="color: ${verdict.color}; margin: 0 auto;">${verdict.answer}</p>`;
+    verdictContainer.innerHTML = `<p style="color: ${verdict.color}; margin: 0 auto;">${verdict.answer}</p>`;
 
     // adding the possibility to see the choices
     optionsContainer.style.display = 'flex';
