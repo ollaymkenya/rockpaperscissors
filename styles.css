@@ -24,7 +24,7 @@ main {
     transition: all .25s ease-in;
 }
 
-.verdict-container {
+.verdict {
     display: flex;
     align-items: center;
     text-align: center;
@@ -32,7 +32,7 @@ main {
     padding: 16px;
 }
 
-.choice-container {
+.choice {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,12 +68,12 @@ img[data-possible='false'] {
     opacity: 0;
 }
 
-.choices {
+.options {
     display: flex;
     justify-content: space-evenly;
 }
 
-.choice {
+.option {
     font-size: 30px;
     border: none;
     padding: 16px;

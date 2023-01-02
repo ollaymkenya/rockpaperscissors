@@ -5,12 +5,12 @@ const choices = [
   { imageUrl: './assets/scissors-person.png', name: 'scissors' },
 ];
 
-var inputChoicesContainer = document.querySelector('.choices');
-var inputsChoices = document.querySelectorAll('.choice');
+var optionsContainer = document.querySelector('.options');
+var options = document.querySelectorAll('.option');
 var computerChoiceOutput = document.querySelector('#computer');
 var personChoiceOutput = document.querySelector('#person');
-var verdictContainer = document.querySelector('.verdict-container');
-var choiceContainer = document.querySelector('.choice-container');
+var verdict = document.querySelector('.verdict');
+var choiceContainer = document.querySelector('.choice');
 var main = document.querySelector('main');
 var possibleAnswersPerson = document.querySelectorAll(
   '.possible-answers__person img'
@@ -87,12 +87,12 @@ async function animateChoosing() {
   //   changing the background
 }
 
-inputsChoices.forEach((inputChoice) => {
+options.forEach((inputChoice) => {
   inputChoice.addEventListener('click', async (ev) => {
     changeImages(3, [possibleAnswersPerson, possibleAnswersComputer]);
 
     // remove the possibility to see the choices
-    inputChoicesContainer.style.display = 'none';
+    optionsContainer.style.display = 'none';
 
     // generating the choice for the computer and getting your choice.
     var randomNumber = Math.floor(Math.random() * 3);
@@ -110,10 +110,10 @@ inputsChoices.forEach((inputChoice) => {
     changeImages(computerChoice, [possibleAnswersComputer]);
 
     // showing the answer
-    verdictContainer.innerHTML = `<p style="color: ${verdict.color}; margin: 0 auto;">${verdict.answer}</p>`;
+    verdict.innerHTML = `<p style="color: ${verdict.color}; margin: 0 auto;">${verdict.answer}</p>`;
 
     // adding the possibility to see the choices
-    inputChoicesContainer.style.display = 'flex';
+    optionsContainer.style.display = 'flex';
     main.style.background = verdict.color;
     return;
   });
