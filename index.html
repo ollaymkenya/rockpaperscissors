@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Rock Paper Scissors</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="game">
-            <div class="verdict">
-                <p>Choose rock, paper or scissors to start</p>
-            </div>
-            <div class="choice">
-                <div class="person">
-                    <div id="person">
-                        <img class="possibe-choice__person" data-visible="false" src="./assets/rock.png" alt="rock"
-                            srcset="">
-                        <img class="possibe-choice__person" data-visible="false" src="./assets/paper.png" alt="paper"
-                            srcset="">
-                        <img class="possibe-choice__person" data-visible="false" src="./assets/scissors.png"
-                            alt="scissors" srcset="">
-                    </div>
-                    <img src="./assets/person.png" alt="person image" srcset="" width="32px">
-                </div>
-                <div class="computer">
-                    <div id="computer">
-                        <img class="possibe-choice__computer" data-visible="false" src="./assets/rock.png" alt="rock"
-                            srcset="">
-                        <img class="possibe-choice__computer" data-visible="false" src="./assets/paper.png" alt="paper"
-                            srcset="">
-                        <img class="possibe-choice__computer" data-visible="false" src="./assets/scissors.png"
-                            alt="scissors" srcset="">
-                    </div>
-                    <img src="./assets/computer.png" alt="computer image" srcset="" width="32px">
-                </div>
-            </div>
-            <div class="options">
-                <button class="option" data-value="0">🪨</button>
-                <button class="option" data-value="1">🗞️</button>
-                <button class="option" data-value="2">✂️</button>
-            </div>
+      <section class="game">
+        <div class="verdict">
+          <p>Choose rock, paper or scissors to start</p>
         </div>
+        <div class="choice">
+          <div class="person">
+            <div id="person">
+              <img
+                class="possibe-choice__person"
+                data-visible="false"
+                src="./assets/rock.png"
+                alt="rock"
+                srcset=""
+              />
+              <img
+                class="possibe-choice__person"
+                data-visible="false"
+                src="./assets/paper.png"
+                alt="paper"
+                srcset=""
+              />
+              <img
+                class="possibe-choice__person"
+                data-visible="false"
+                src="./assets/scissors.png"
+                alt="scissors"
+                srcset=""
+              />
+            </div>
+            <img
+              src="./assets/person.png"
+              alt="person image"
+              srcset=""
+              width="32px"
+            />
+          </div>
+          <div class="computer">
+            <div id="computer">
+              <img
+                class="possibe-choice__computer"
+                data-visible="false"
+                src="./assets/rock.png"
+                alt="rock"
+                srcset=""
+              />
+              <img
+                class="possibe-choice__computer"
+                data-visible="false"
+                src="./assets/paper.png"
+                alt="paper"
+                srcset=""
+              />
+              <img
+                class="possibe-choice__computer"
+                data-visible="false"
+                src="./assets/scissors.png"
+                alt="scissors"
+                srcset=""
+              />
+            </div>
+            <img
+              src="./assets/computer.png"
+              alt="computer image"
+              srcset=""
+              width="32px"
+            />
+          </div>
+        </div>
+        <div class="options">
+          <button class="option" data-value="0">🪨</button>
+          <button class="option" data-value="1">🗞️</button>
+          <button class="option" data-value="2">✂️</button>
+        </div>
+      </section>
+      <section class="history">
+        <div class="history-container">
+          <div class="history-title">
+            <div class="scores">
+              <span id="person-score"></span>
+              <span id="computer-score"></span>
+              <span>
+                <button class="reset-history">
+                  <img
+                    src="./assets/refresh-outline.svg"
+                    alt=""
+                    srcset=""
+                    width="24px"
+                  />
+                </button>
+              </span>
+            </div>
+            <div class="table-title">
+              <span>
+                <img
+                  src="./assets/person.png"
+                  alt="person image"
+                  srcset=""
+                  width="32px"
+                />
+              </span>
+              <span>
+                <img
+                  src="./assets/computer.png"
+                  alt="computer image"
+                  srcset=""
+                  width="32px"
+                />
+              </span>
+              <span>Win</span>
+            </div>
+          </div>
+          <table class="previous-scores"></table>
+          <div class="no-data__paragraph">
+            <p>Please play to view history</p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
